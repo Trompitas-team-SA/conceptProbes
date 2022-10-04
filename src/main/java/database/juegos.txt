@@ -1,0 +1,56 @@
+***********************
+-0(Bulls, Lakers, 30/09/2022, AvenidaSiempreViva, 110-109, Bulls, 500
+Arbitro(pepe, 24, 10
+***********************
+***********************
+-1(warriors, Nets, 31/09/2022, AvenidaNuncaViva, 112-100, Warriors, 400
+Arbitro(pepe1, 25, 11
+***********************
+***********************
+-2(Knicks, Heats, 01/10/2022, AvenidaExistente, 100-102, Heats, 200
+Arbitro(pepe3, 23, 12
+***********************
+***********************
+-3(Philadelphia, Mavericks, 02/10/2022, Cali, 100-150, Mavericks, 700
+Arbitro(pepe4, 24, 13
+***********************
+***********************
+-4(Clippers, Spurs, 03/10/2022, Chicago, 120-103, Clippers, 700
+Arbitro(pepe5, 25, 14
+***********************
+***********************
+-5(Wizards, Utah, 04/10/2022, Utah, 120-130, Utah, 1000
+Arbitro(pepe6, 26, 15
+***********************
+***********************
+-6(Hornets, Detroit, 05/10/2022, Detroit, 120-121, Detroit, 1100
+Arbitro(pepe7, 27, 16
+***********************
+***********************
+-7(Cavaliers, Blazers, 06/10/2022, Buga, 120-111, Cavaliers, 1200
+Arbitro(pepe7, 27, 16
+***********************
+***********************
+-8(Cali , America , Mon Oct 03 22:29:03 COT 2022 , Caleñopapito , 10-8 , Cali , 4000
+Arbitro(pepeson , Mon Oct 03 22:29:03 COT 2022 , 20
+***********************
+***********************
+-9(Independiente pareja , Deportes dosman , Mon Oct 03 22:38:45 COT 2022 , Caleñopapito , 11-10 , Independiente pareja , 5000
+Arbitro(pepeson2 , 22 , 20
+***********************
+***********************
+-10(ArturoFutbol , Camilo Club , Mon Oct 03 22:40:28 COT 2022 , Caldas , 110-210 , Camilo Club , 1000
+Arbitro(pepeson3 , 23 , 19
+***********************
+***********************
+-11(Brian , Pablo , Mon Oct 03 22:41:53 COT 2022 , Capri , 110-210 , Pablo , 10002
+Arbitro(pepeson4 , 24 , 19
+***********************
+***********************
+-12(Brian , Pablo , Tue Oct 04 18:27:13 COT 2022 , Capri , 110-210 , Pablo , 10002
+Arbitro(pepeson4 , 24 , 19
+***********************
+***********************
+-13(Brian , Pablo , Tue Oct 04 18:32:19 COT 2022 , Capri , 110-210 , Pablo , 10002
+Arbitro(pepeson4 , 24 , 19
+***********************
