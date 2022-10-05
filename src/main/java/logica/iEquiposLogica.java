@@ -10,4 +10,6 @@ package logica;
  */
 public interface iEquiposLogica {
     
+    public void imprimirDataEquipos();
+    
 }
