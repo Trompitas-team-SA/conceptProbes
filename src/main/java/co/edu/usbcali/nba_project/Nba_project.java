@@ -7,6 +7,7 @@ package co.edu.usbcali.nba_project;
 
 import co.edu.usbcali.nba_project.models.LigaNBA;
 import java.io.File;
+import logica.EquiposLogica;
 import logica.PartidosLogica;
 
 
@@ -19,9 +20,12 @@ public class Nba_project {
 
     public static void main(String[] args) {
        
+        PartidosLogica parejaTeAmo = new PartidosLogica();
+        parejaTeAmo.imprimirAñadirDataPartidosYArbitros();
+        
+        EquiposLogica parejaNoTeAmo = new EquiposLogica();
+        parejaNoTeAmo.imprimirDataEquipos();
 
-        
-        
-        
     }
+    
 }

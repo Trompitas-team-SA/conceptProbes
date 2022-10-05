@@ -1,0 +1,18 @@
+***********************
+-0(Atlanta Hawks, Atlanta, 12, 0, 0, 0, 0
++Jugador(11, Trae young, 185, 74, 0, 0, 0, 0, 0
++Jugador(15, Clint Capela, 208, 116, 0, 0, 0, 0, 0
++Jugador(20, John Collins, 206, 103, 0, 0, 0, 0, 0
++Jugador(13, Bogdan Bogdanović, 198, 100, 0, 0, 0, 0, 0
++Jugador(3, Kevin Huerter, 201, 90, 0, 0, 0, 0, 0
++Jugador(21, Cameron Reddish, 203, 98, 0, 0, 0, 0, 0
++Jugador(8, Danilo Gallinari, 208, 101, 0, 0, 0, 0, 0
++Jugador(38, Chaundee Brown, 196, 98, 0, 0, 0, 0, 0
++Jugador(17, Onyeka Okongwu, 203, 109, 0, 0, 0, 0, 0
++Jugador(4, Wesley Iwundu, 198, 99, 0, 0, 0, 0, 0
++Jugador(6, Lou Williams, 188, 87, 0, 0, 0, 0, 0
++Jugador(14, Malcolm Hill, 198, 93, 0, 0, 0, 0, 0
+Personal(Aisha Franklin, Nutricionista Dietista, Nutricionista
+Personal(Kevin Karl, Licenciatura deportiva, Aguatero
+Personal(Nate McMillan, Ex jugador, Entrenador
+***********************

@@ -4,10 +4,20 @@
  */
 package logica;
 
+import repositorio.EquiposRepositorio;
+
 /**
  *
  * @author mac20
  */
-public class EquiposLogica {
+public class EquiposLogica implements iEquiposLogica{
+
+    @Override
+    public void imprimirDataEquipos() {
+        
+        EquiposRepositorio equipo = new EquiposRepositorio();
+        equipo.imprimirDataEquipos();
+        
+    }
     
 }
