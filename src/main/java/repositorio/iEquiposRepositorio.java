@@ -19,6 +19,6 @@ public interface iEquiposRepositorio {
     public void ingresarDataEquipos( String linea );
     public void ingresarDataJugadores( String linea );
     public void ingresarDataPersonal(String linea);
-    public void imprimirDataEquipos();
     
+    public void imprimirDataEquipos();  
 }

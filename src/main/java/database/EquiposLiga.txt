@@ -13,6 +13,36 @@
 +Jugador(6, Lou Williams, 188, 87, 0, 0, 0, 0, 0
 +Jugador(14, Malcolm Hill, 198, 93, 0, 0, 0, 0, 0
 Personal(Aisha Franklin, Nutricionista Dietista, Nutricionista
-Personal(Kevin Karl, Licenciatura deportiva, Aguatero
-Personal(Nate McMillan, Ex jugador, Entrenador
+***********************
+***********************
+-1(Atlanta Hawks, Karolg, 12, 0, 0, 0, 0
++Jugador(11, Trae Karol, 185, 74, 0, 0, 0, 0, 0
++Jugador(15, Clint Karol, 208, 116, 0, 0, 0, 0, 0
++Jugador(20, John Karol, 206, 103, 0, 0, 0, 0, 0
++Jugador(13, Bogdan Karol, 198, 100, 0, 0, 0, 0, 0
++Jugador(3, Kevin Karolr, 201, 90, 0, 0, 0, 0, 0
++Jugador(21, Cameron Karol, 203, 98, 0, 0, 0, 0, 0
++Jugador(8, Danilo Karol, 208, 101, 0, 0, 0, 0, 0
++Jugador(38, Chaundee Karol, 196, 98, 0, 0, 0, 0, 0
++Jugador(17, Onyeka Karol, 203, 109, 0, 0, 0, 0, 0
++Jugador(4, Wesley Karol, 198, 99, 0, 0, 0, 0, 0
++Jugador(6, Lou Karol, 188, 87, 0, 0, 0, 0, 0
++Jugador(14, Malcolm Karol, 198, 93, 0, 0, 0, 0, 0
+Personal(karolsita, Nutricionista Dietista, Nutricionista
+***********************
+***********************
+-2(Pepeson, pepitoperez, 12, 0, 0, 0, 0
++Jugador(11, Trae Pepe, 185, 74, 0, 0, 0, 0, 0
++Jugador(15, Clint Pepe, 208, 116, 0, 0, 0, 0, 0
++Jugador(20, John Pepe, 206, 103, 0, 0, 0, 0, 0
++Jugador(13, Bogdan Pepe, 198, 100, 0, 0, 0, 0, 0
++Jugador(3, Kevin Pepe, 201, 90, 0, 0, 0, 0, 0
++Jugador(21, Cameron Pepe, 203, 98, 0, 0, 0, 0, 0
++Jugador(8, Danilo Pepe, 208, 101, 0, 0, 0, 0, 0
++Jugador(38, Chaundee Pepe, 196, 98, 0, 0, 0, 0, 0
++Jugador(17, Onyeka Pepe, 203, 109, 0, 0, 0, 0, 0
++Jugador(4, Wesley Pepe, 198, 99, 0, 0, 0, 0, 0
++Jugador(6, Lou Pepe, 188, 87, 0, 0, 0, 0, 0
++Jugador(14, Malcolm Pepe, 198, 93, 0, 0, 0, 0, 0
+Personal(PepesonNoFalla, Nutricionista Dietista, Nutricionista
 ***********************
