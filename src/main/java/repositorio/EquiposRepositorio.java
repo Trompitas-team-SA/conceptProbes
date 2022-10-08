@@ -5,12 +5,15 @@
 package repositorio;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -22,13 +25,63 @@ public class EquiposRepositorio implements iEquiposRepositorio{
     HashMap<String, String[][]> Jugadores = new HashMap<>();
     HashMap<String, String[]> Personal = new HashMap<>();
     
-    String jugadoresEquipo = "";
-    int contador = 0;
-    String idEquipo = "";
+    String  jugadoresEquipo = "";
+    int     contador        = 0 ;
+    String  idEquipo        = "";
+    
+    
+    @Override
+    public void escribirEquipoNuevo( String[] dataEquipo, String[][] dataJugadores, String[] dataTrabajador ) {
+        leerArchivoEquipos();
+        FileWriter fichero = obtenerFichero();
+        
+        idEquipo = ( Integer.parseInt( idEquipo ) + 1 ) + "";
+        
+        String data = "\n***********************" + "\n-" + idEquipo + "(" + dataEquipo[0] + "," + dataEquipo[1] + "," + dataEquipo[2] + "," + dataEquipo[3] + "," + dataEquipo[4] + "," + dataEquipo[5] + ","+ dataEquipo[6];
+        
+        for( int i = 0; i < dataJugadores.length; i ++ ){
+           
+            data += "\n+Jugador(" + dataJugadores[i][0] + "," + dataJugadores[i][1] + "," + dataJugadores[i][2] + "," + dataJugadores[i][3] + "," + dataJugadores[i][4] + "," + dataJugadores[i][5] + "," + dataJugadores[i][6] + "," + dataJugadores[i][7] + "," + dataJugadores[i][8];
+        }
+        
+        data+= "\nPersonal(" + dataTrabajador[0] + "," + dataTrabajador[1] + "," + dataTrabajador[2] + "\n***********************";
+        
+        escribir( data, fichero );
+    }
+        
+        
+    
+    
+    public void escribir( String data, FileWriter fichero ){
+        
+        BufferedWriter bw = new BufferedWriter( fichero );
+        
+        try {
+            bw.write(data ) ;
+            bw.close()          ;
+            
+        } catch (IOException ex) {
+            Logger.getLogger(PartidosRepositorio.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public FileWriter obtenerFichero(){
+        
+        FileWriter fichero = null;
+        
+        try{
+            
+            fichero = new FileWriter( System.getProperty("user.dir") +"/src/main/java/database/EquiposLiga.txt", true);
+            
+        } catch( IOException io ){
+            System.out.println("Error al obtener fichero Equipos Repositorio " + io );
+        }
+        
+        return fichero;
+    }
     
     @Override
     public String leerArchivoEquipos() {
-        
         
         try{
         
@@ -147,15 +200,14 @@ public class EquiposRepositorio implements iEquiposRepositorio{
         String[] informacionPersonal = datosConParentesis[1].split(",");
         
         Personal.put( idEquipo, informacionPersonal );
-        idEquipo = "";
+
     }
 
     @Override
     public void imprimirDataEquipos() {
         
         leerArchivoEquipos();
-        
-        
+
         System.out.println("\n");
         for( int i = 0; i < Equipos.size(); i ++ ){
                
@@ -177,9 +229,7 @@ public class EquiposRepositorio implements iEquiposRepositorio{
             
             System.out.println("\n");
             System.out.println("Jugadores");
-            
-            
-            
+
             for( int j = 0; j < Jugadores.get( i + "").length; j ++ ){
                 
                 for( int k = 0; k < 9; k ++ ){
@@ -187,20 +237,11 @@ public class EquiposRepositorio implements iEquiposRepositorio{
                 }
                 
                 System.out.println("");
-            }
-            
-           
+            } 
         }
-        
-            
+   
      } 
-    
-    
-    
 
-    
-    
-    
       @Override
     public BufferedReader obtenerFile() {
         
@@ -216,7 +257,5 @@ public class EquiposRepositorio implements iEquiposRepositorio{
         }
         
         return lector;
-    }
-   
-    
+    } 
 }

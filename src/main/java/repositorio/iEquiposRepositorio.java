@@ -5,6 +5,7 @@
 package repositorio;
 
 import java.io.BufferedReader;
+import java.io.FileWriter;
 
 /**
  *
@@ -21,4 +22,9 @@ public interface iEquiposRepositorio {
     public void ingresarDataPersonal(String linea);
     
     public void imprimirDataEquipos();  
+    
+    
+    public void escribirEquipoNuevo( String[] dataEquipo, String[][] dataJugadores, String[] dataTrabajador  );
+    public FileWriter obtenerFichero();
+    public void escribir( String data, FileWriter fichero );
 }

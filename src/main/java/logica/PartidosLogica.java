@@ -23,14 +23,23 @@ import java.time.LocalDate;
 public class PartidosLogica implements iPartidosLogica {
     
     
-    
-    public void imprimirAñadirDataPartidosYArbitros(){
+    @Override
+    public void añadirPartido(){
+        
+        
+        String nombreEquipoUno      = "";
+        String nombreEquipoDos      = "";
+        String locacionPartido      = "";
+        String marcadorPartido      = "";
+        String ganadorEncuentro     = "";
+        String numeroEspectadores   = "";
+        String nombreArbitro        = "";
+        String edadArbitro          = "";
+        int    expulsionesEfectuadas= 0 ;
         
         PartidosRepositorio partidos = new PartidosRepositorio();
+       
         
-        
-        //Data partido = equipo1, equipo2, fecha, lugar, marcador, ganador, nEspectadores
-        //Data arbitro = nombre, edad, nFaltasPitadas
         
         
         
@@ -38,16 +47,16 @@ public class PartidosLogica implements iPartidosLogica {
         Arbitro arbitro1 = new Arbitro();
         
         ArrayList<String> equipos = new ArrayList<>();
-        equipos.add("Brian");
-        equipos.add("Pablo");
+        equipos.add( nombreEquipoUno );
+        equipos.add( nombreEquipoDos );
         Date fecha = new Date();
         
         instPartido.setEquiposEnfrentados( equipos );
         instPartido.setFechaJuego( fecha );
-        instPartido.setLocacion("Capri");
-        instPartido.setMarcador("110-210");
-        instPartido.setGanadorEncuentro("Pablo");
-        instPartido.setNumExpectadores("10002");
+        instPartido.setLocacion(locacionPartido );
+        instPartido.setMarcador(marcadorPartido);
+        instPartido.setGanadorEncuentro( ganadorEncuentro );
+        instPartido.setNumExpectadores( numeroEspectadores );
         
         String [] dataPartido = new String[7];
         dataPartido[0] = instPartido.getEquiposEnfrentados().get(0)     + "";
@@ -73,18 +82,17 @@ public class PartidosLogica implements iPartidosLogica {
         dataArbitro[2] = arbitro1.getExpulsionJugador() + "";
         
         
-        
-        
-        
         String stringPartido = "" + dataPartido[0] + " , " + dataPartido[1] + " , " + dataPartido[2] + " , " + dataPartido[3] + " , " + dataPartido[4] + " , " + dataPartido[5] + " , " + dataPartido[6];
         String stringArbitro = "" + dataArbitro[0] + " , " + dataArbitro[1] + " , " + dataArbitro[2];
         
-        
-         
         partidos.añadirRegistroJuego( stringPartido , stringArbitro  );
+    }
+
+    @Override
+    public void imprimirPartidosYArbitros() {
         
-        
-        partidos.imprimirDataArbitros();
-        partidos.imprimirDataPartidos();
+        PartidosRepositorio partido = new PartidosRepositorio();
+        partido.imprimirDataPartidos();
+        partido.imprimirDataArbitros();
     }
 }

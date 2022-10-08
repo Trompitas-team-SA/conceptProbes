@@ -42,19 +42,3 @@ Arbitro(pepeson2 , 22 , 20
 -10(ArturoFutbol , Camilo Club , Mon Oct 03 22:40:28 COT 2022 , Caldas , 110-210 , Camilo Club , 1000
 Arbitro(pepeson3 , 23 , 19
 ***********************
-***********************
--11(Brian , Pablo , Fri Oct 07 18:34:46 COT 2022 , Capri , 110-210 , Pablo , 10002
-Arbitro(pepeson4 , 24 , 19
-***********************
-***********************
--12(Brian , Pablo , Fri Oct 07 18:35:52 COT 2022 , Capri , 110-210 , Pablo , 10002
-Arbitro(pepeson4 , 24 , 19
-***********************
-***********************
--13(Brian , Pablo , Fri Oct 07 18:42:40 COT 2022 , Capri , 110-210 , Pablo , 10002
-Arbitro(pepeson4 , 24 , 19
-***********************
-***********************
--14(Brian , Pablo , Fri Oct 07 18:47:22 COT 2022 , Capri , 110-210 , Pablo , 10002
-Arbitro(pepeson4 , 24 , 19
-***********************

@@ -21,10 +21,11 @@ public class Nba_project {
     public static void main(String[] args) {
        
         PartidosLogica parejaTeAmo = new PartidosLogica();
-        parejaTeAmo.imprimirAñadirDataPartidosYArbitros();
+        parejaTeAmo.imprimirPartidosYArbitros();
         
         EquiposLogica parejaNoTeAmo = new EquiposLogica();
         parejaNoTeAmo.imprimirDataEquipos();
+        parejaNoTeAmo.escribirEquipoNuevo();
 
     }
     

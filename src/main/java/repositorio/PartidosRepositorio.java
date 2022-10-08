@@ -27,9 +27,11 @@ public class PartidosRepositorio implements iPartidosRepositorio {
     HashMap<String, String[]> partidosJugados = new HashMap<>();
     HashMap<String, String[]> arbitros        = new HashMap<>();
     String iteradorNPartido = null;
+
     
-    //src/main/java/database.txt
-    //Ruta de el archivo
+    
+    
+    
     
     public String leerArchivoJuegos() {
         
@@ -56,8 +58,6 @@ public class PartidosRepositorio implements iPartidosRepositorio {
         
         return "";
     }  
-    
-    
     
     
     public void añadirRegistroJuego( String dataPartido, String dataArbitro )  {

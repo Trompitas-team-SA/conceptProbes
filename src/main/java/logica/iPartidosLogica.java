@@ -10,5 +10,6 @@ package logica;
  */
 public interface iPartidosLogica {
     
-    public void imprimirAñadirDataPartidosYArbitros();
+    public void añadirPartido            ();
+    public void imprimirPartidosYArbitros();
 }
