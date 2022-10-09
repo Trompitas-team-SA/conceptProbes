@@ -11,5 +11,5 @@ package logica;
 public interface iEquiposLogica {
     
     public void imprimirDataEquipos();
-    public void escribirEquipoNuevo();
+    public void escribirEquipoNuevo( String[] datosEquipo, String[][] datosJugadores, String[] dataTrabajador);
 }

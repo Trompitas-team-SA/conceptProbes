@@ -9,7 +9,9 @@ package interfaces;
  * @author nico2
  */
 public class CrearEquipoInterfaz extends javax.swing.JFrame {
-
+    
+    String[][] informacionJugadores = new String[ 12 ][9];
+    
     /**
      * Creates new form CrearEquipoInterfaz
      */
@@ -206,9 +208,16 @@ public class CrearEquipoInterfaz extends javax.swing.JFrame {
         jTextField4.setText("");
         jLabel6.setText(lb);
         
-        jButton2.setVisible(false);
-        
-        jButton1.setVisible(false);
+        if (num > 1) {
+            jButton2.setVisible(true);
+        } else if (num <= 1) {
+            jButton2.setVisible(false);
+        }
+        if (num == 12) {
+            jButton1.setVisible(false);
+        } else if (num <= 11) {
+            jButton1.setVisible(true);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -222,9 +231,16 @@ public class CrearEquipoInterfaz extends javax.swing.JFrame {
         jTextField4.setText("");
         jLabel6.setText(lb);
         
-        jButton2.setVisible(false);
-        
-        jButton1.setVisible(false);
+        if (num > 1) {
+            jButton2.setVisible(true);
+        } else if (num <= 1) {
+            jButton2.setVisible(false);
+        }
+        if (num == 12) {
+            jButton1.setVisible(false);
+        } else if (num <= 11) {
+            jButton1.setVisible(true);
+        }
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -238,9 +254,20 @@ public class CrearEquipoInterfaz extends javax.swing.JFrame {
         int i = Integer.parseInt(jLabel6.getText());
         i = i -1;
         
-        String[] jugadores = {numerocamisa, nombre, altura, peso};
+        String[] jugadores = { numerocamisa, nombre, altura, peso, "0", "0", "0", "0", "0"};
         
-        System.out.println( jugadores[0] + jugadores[1] + jugadores[2] + jugadores[3] );
+        System.out.println( jugadores[0] + jugadores[1] + jugadores[2] + jugadores[3] + i);
+        
+        informacionJugadores[ i ] = jugadores;
+        
+        
+        if( i == 11 ){
+            //TODO ya la data de infoJugador esta lista para mandarse a escribir xd
+            
+            CrearPersonal personal = new CrearPersonal();
+            personal.setDataEquipo(informacionJugadores );
+            personal.setVisible( true );
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
@@ -277,6 +304,12 @@ public class CrearEquipoInterfaz extends javax.swing.JFrame {
 
             }
         });
+    }
+    
+    
+    
+    public String[][] getInfoJugadores(){
+        return informacionJugadores;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
