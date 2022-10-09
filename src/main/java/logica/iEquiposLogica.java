@@ -12,4 +12,7 @@ public interface iEquiposLogica {
     
     public void imprimirDataEquipos();
     public void escribirEquipoNuevo( String[] datosEquipo, String[][] datosJugadores, String[] dataTrabajador);
+    public void obtenerEquipoPorId( String idEquipo );
+    public void obtenerJugadoresEquipoPorId( String idEquipo );
+    public void obtenerPersonalEquipoPorId( String idEquipo );
 }

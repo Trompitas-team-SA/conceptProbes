@@ -99,17 +99,13 @@ public class EquiposRepositorio implements iEquiposRepositorio{
                     switch ( validarSiLineaEsDeEquipoUJugadorUPersonal( strng )) {
                         
                         case 1:
-                            //Entro en equipo
-                            
                             ingresarDataEquipos( strng );
                             break;
                         case 2:
-                            //Entro jugador 
                             jugadoresEquipo = jugadoresEquipo +  " / " + strng;
                             ingresarDataJugadores( jugadoresEquipo );
                             break;
                         case 3:
-                            //Entra trabajador
                             ingresarDataPersonal( strng );
                          break;
                     }
@@ -258,4 +254,25 @@ public class EquiposRepositorio implements iEquiposRepositorio{
         
         return lector;
     } 
+
+    @Override
+    public HashMap<String, String[][]> getHashMapJugadores() {
+        
+        leerArchivoEquipos();
+        return Jugadores;
+    }
+
+    @Override
+    public HashMap<String, String[]> getHashMapEquipo() {
+        
+        leerArchivoEquipos();
+        return Equipos;
+    }
+
+    @Override
+    public HashMap<String, String[]> getHashMapPersonal() {
+        
+        leerArchivoEquipos();
+        return Personal;
+    }
 }

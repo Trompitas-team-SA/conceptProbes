@@ -4,6 +4,7 @@
  */
 package logica;
 
+import java.util.HashMap;
 import repositorio.EquiposRepositorio;
 
 /**
@@ -12,40 +13,55 @@ import repositorio.EquiposRepositorio;
  */
 public class EquiposLogica implements iEquiposLogica{
 
-    
+    EquiposRepositorio equipo  = new EquiposRepositorio();
     
     @Override
     public void imprimirDataEquipos() {
         
         EquiposRepositorio equipo = new EquiposRepositorio();
         equipo.imprimirDataEquipos();
-        
     }
 
     @Override
     public void escribirEquipoNuevo( String[] datosEquipo, String[][] datosJugadores, String[] dataTrabajador ) {
-        
-        EquiposRepositorio equipo  = new EquiposRepositorio();
         equipo.escribirEquipoNuevo( datosEquipo, datosJugadores , dataTrabajador );
-         
-//        String[] datosEquipo = { "escrituraPrueba", "Karolg", "12", "0", "0", "0", "0" };
-//        String[][] datosJugadores = {   {"d1", "Nombre1", "d2", "d3", "d4", "d5", "d6", "d7", "d8" },
-//                                        {"d1", "Nombre2", "d2", "d3", "d4", "d5", "d6", "d7", "d8" },
-//                                        {"d1", "Nombre3", "d2", "d3", "d4", "d5", "d6", "d7", "d8" },
-//                                        {"d1", "Nombre4", "d2", "d3", "d4", "d5", "d6", "d7", "d8" },
-//                                        {"d1", "Nombre5", "d2", "d3", "d4", "d5", "d6", "d7", "d8" },
-//                                        {"d1", "Nombre6", "d2", "d3", "d4", "d5", "d6", "d7", "d8" },
-//                                        {"d1", "Nombre7", "d2", "d3", "d4", "d5", "d6", "d7", "d8" },
-//                                        {"d1", "Nombre8", "d2", "d3", "d4", "d5", "d6", "d7", "d8" },
-//                                        {"d1", "Nombre9", "d2", "d3", "d4", "d5", "d6", "d7", "d8" },
-//                                        {"d1", "Nombre10", "d2", "d3", "d4", "d5", "d6", "d7", "d8" },
-//                                        {"d1", "Nombre11", "d2", "d3", "d4", "d5", "d6", "d7", "d8" },
-//                                        {"d1", "Nombre12", "d2", "d3", "d4", "d5", "d6", "d7", "d8" } 
-//                
-//        };
-//        String[] dataTrabajador = {"Penenory", "Nutricionista Dietista", "Nutricionista"};
+    }
+    
+    
+    public void obtenerEquipoPorId( String equipoId ){
+        HashMap<String, String[]> infoEquipo = equipo.getHashMapEquipo();
         
-       
+        System.out.println("Equipo");
+        for( int i = 0; i < 7; i ++ ){
+            System.out.print( infoEquipo.get( equipoId )[i] + " , " );
+        }
+        System.out.println("\n");
+    }
+    
+    
+    public void obtenerJugadoresEquipoPorId( String equipoId ){
+        HashMap<String, String[][]> infoJugadores = equipo.getHashMapJugadores();
+        
+        System.out.println("Jugadores");
+        for( int i = 0; i < 12; i ++ ){
+            
+            for( int k = 0; k < 9; k++ ){
+                System.out.print( infoJugadores.get( equipoId )[i][k] + " , " );
+            }
+            System.out.println("\n");
+        }
+        System.out.println("\n");
+    }
+    
+    public void obtenerPersonalEquipoPorId( String equipoId ){
+        HashMap<String, String[]> infoPersonal = equipo.getHashMapPersonal();
+        
+        
+        System.out.println("Personal");
+        for( int i = 0; i < 3; i ++ ){
+            System.out.print( infoPersonal.get( equipoId )[i] + " , " );
+        }
+        System.out.println("\n");
     }
     
 }
