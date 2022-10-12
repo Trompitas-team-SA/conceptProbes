@@ -161,6 +161,7 @@ public class CrearPersonal extends javax.swing.JFrame {
         EquiposLogica equipoLog = new EquiposLogica();
         equipoLog.escribirEquipoNuevo( infoProvisionalEquipo, infoPlayers, trabajador);
         
+        equipoLog.imprimirDataEquipos();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**

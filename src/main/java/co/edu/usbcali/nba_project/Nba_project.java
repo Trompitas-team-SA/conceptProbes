@@ -22,13 +22,11 @@ public class Nba_project {
     public static void main(String[] args) {
        
         CrearEquipoInterfaz crearEquipo = new CrearEquipoInterfaz();
-        
+        crearEquipo.setVisible( true );
 //        CrearEquipoInterfaz
 
-        EquiposLogica logica = new EquiposLogica();
-        logica.obtenerEquipoPorId("1");
-        logica.obtenerJugadoresEquipoPorId("1");
-        logica.obtenerPersonalEquipoPorId("1");
+        
+
     }
     
 }
