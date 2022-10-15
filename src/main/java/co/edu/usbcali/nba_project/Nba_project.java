@@ -21,12 +21,12 @@ public class Nba_project {
 
     public static void main(String[] args) {
        
+        
+        //CrearEquipoInterfaz
+        
         CrearEquipoInterfaz crearEquipo = new CrearEquipoInterfaz();
         crearEquipo.setVisible( true );
-//        CrearEquipoInterfaz
-
-        
-
+       
     }
     
 }
