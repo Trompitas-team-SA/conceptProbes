@@ -6,6 +6,7 @@ package logica;
 
 import java.util.HashMap;
 import repositorio.EquiposRepositorio;
+import repositorio.SubEquipos.TeamRep;
 
 /**
  *
@@ -79,8 +80,6 @@ public class EquiposLogica implements iEquiposLogica{
     public void actualizarEquipo( String codigoEquipo, String[] datosEquipo, String[][] datosJugadores ){
         equipo.actualizarEquipo(codigoEquipo, datosEquipo, datosJugadores);
     }
-
-    public int size() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    
+    
 }

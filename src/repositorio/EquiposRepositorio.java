@@ -15,6 +15,10 @@ import java.util.HashMap;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import repositorio.SubEquipos.JugadoresRep;
+import repositorio.SubEquipos.PersonalRep;
+import repositorio.SubEquipos.TeamRep;
+
 
 /**
  *
@@ -26,32 +30,45 @@ public class EquiposRepositorio implements iEquiposRepositorio{
     HashMap<String, String[][]> Jugadores = new HashMap<>();
     HashMap<String, String[]> Personal = new HashMap<>();
     
+    TeamRep teamRep = new TeamRep();
+    JugadoresRep jugadoresRep = new JugadoresRep();
+    PersonalRep personalRep = new PersonalRep();
+    
     String  jugadoresEquipo = "";
-    int     contador        = 0 ;
     String  idEquipo        = "";
     
     
     @Override
     public void escribirEquipoNuevo( String[] dataEquipo, String[][] dataJugadores, String[] dataTrabajador ) {
         
-        
-        leerArchivoEquipos();
-        
-        
-        FileWriter fichero = obtenerFichero();
-        
-        idEquipo = ( Integer.parseInt( idEquipo ) + 1 ) + "";
-        
-        String data = "\n***********************" + "\n-" + idEquipo + "(" + dataEquipo[0] + "," + dataEquipo[1] + "," + dataEquipo[2] + "," + dataEquipo[3] + "," + dataEquipo[4] + "," + dataEquipo[5] + ","+ dataEquipo[6];
-        
-        for( int i = 0; i < dataJugadores.length; i ++ ){
-           
-            data += "\n+Jugador(" + dataJugadores[i][0] + "," + dataJugadores[i][1] + "," + dataJugadores[i][2] + "," + dataJugadores[i][3] + "," + dataJugadores[i][4] + "," + dataJugadores[i][5] + "," + dataJugadores[i][6] + "," + dataJugadores[i][7] + "," + dataJugadores[i][8];
+       
+        try {
+            leerArchivoEquipos();
+            
+            
+            FileWriter fichero = obtenerFichero();
+            
+            
+            
+            idEquipo = ( Integer.parseInt( idEquipo ) + 1 ) + "";
+            
+            
+            
+            String data = "\n***********************" + "\n-" + idEquipo + "(" + dataEquipo[0] + "," + dataEquipo[1] + "," + dataEquipo[2] + "," + dataEquipo[3] + "," + dataEquipo[4] + "," + dataEquipo[5] + ","+ dataEquipo[6];
+            
+            for( int i = 0; i < dataJugadores.length; i ++ ){
+                
+                data += "\n+Jugador(" + dataJugadores[i][0] + "," + dataJugadores[i][1] + "," + dataJugadores[i][2] + "," + dataJugadores[i][3] + "," + dataJugadores[i][4] + "," + dataJugadores[i][5] + "," + dataJugadores[i][6] + "," + dataJugadores[i][7] + "," + dataJugadores[i][8];
+            }
+            
+            data+= "\nPersonal(" + dataTrabajador[0] + "," + dataTrabajador[1] + "," + dataTrabajador[2] + "\n***********************";
+            
+            escribir( data, fichero );
+            
+            fichero.close();
+        } catch (IOException ex) {
+            Logger.getLogger(EquiposRepositorio.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        data+= "\nPersonal(" + dataTrabajador[0] + "," + dataTrabajador[1] + "," + dataTrabajador[2] + "\n***********************";
-        
-        escribir( data, fichero );
     }
         
         
@@ -106,20 +123,28 @@ public class EquiposRepositorio implements iEquiposRepositorio{
                         switch ( validarSiLineaEsDeEquipoUJugadorUPersonal( strng )) {
 
                             case 1:
-                                ingresarDataEquipos( strng );
+                                 
+                                teamRep.ingresarDataEquipos(strng);
+                                idEquipo = teamRep.getIdEquipo();
+                                Equipos = teamRep.getHashEquipos();
+                                
                                 break;
                             case 2:
-                                jugadoresEquipo = jugadoresEquipo +  " / " + strng;
-                                ingresarDataJugadores( jugadoresEquipo );
+                                jugadoresEquipo = jugadoresRep.actualizarStringJugadoresEquipo(strng);
+                                jugadoresRep.ingresarDataJugadores(jugadoresEquipo,idEquipo);
+                                Jugadores = jugadoresRep.getHashJugadores();
+                                
                                 break;
                             case 3:
-                                ingresarDataPersonal( strng );
+                                personalRep.ingresarDataPersonal( strng , idEquipo);
+                                Personal = personalRep.getHashPersonal();
                              break;
                         }       
                     }     
                 }
                 
-            }        
+            }
+            lectorIterar.close();
         }  catch( IOException Io){
             System.out.println( "Error IO en EquiposRepositorio" + Io );
         }
@@ -127,41 +152,9 @@ public class EquiposRepositorio implements iEquiposRepositorio{
         return "";
     }
 
+ 
     
     
-    @Override
-    public void ingresarDataJugadores(String linea) {
-        
-        contador ++;
-        
-        if( contador == 12 ){
-           
-            jugadoresEquipo = "";
-            contador = 0;
-            Jugadores.put( idEquipo, dataJugadoresEquipo(linea));
-        }
-    }
-    
-    
-    public String[][] dataJugadoresEquipo( String linea ){
-        
-        linea = linea.substring( 2 );
-        String[] separandoJugadoresConDiagonal = linea.split("/");
-        
-        String[][] informacionJugadoresCompleta = new String[ separandoJugadoresConDiagonal.length ][9];
-        
-        
-        for( int i = 0; i < separandoJugadoresConDiagonal.length; i++ ){
-            
-            String dataJugador = separandoJugadoresConDiagonal[ i ].split("\\(")[1];
-            String[] datosJugadorSeparados = dataJugador.split(",");
-            
-            informacionJugadoresCompleta[ i ] = datosJugadorSeparados;
-        }
-        
-        
-        return informacionJugadoresCompleta;
-    };
     
     
     @Override
@@ -181,31 +174,7 @@ public class EquiposRepositorio implements iEquiposRepositorio{
         else return 3;
     }
 
-    @Override
-    public void ingresarDataEquipos(String linea) {
-        
-        
-         //datosConParentesis es un arreglo donde el primer valor es lo que existe antes del "(" y despues ( antes es el id = Nombre del equipo y despues es la data 
-        String[ ] datosConParentesis = linea.split("\\(");
-        
-        idEquipo =  String.valueOf( linea.charAt(1) );
-        String[] informacionEquipo = datosConParentesis[1].split(",");  
-        
-        Equipos.put( idEquipo, informacionEquipo ); 
-    }
-
- 
-
-    @Override
-    public void ingresarDataPersonal(String linea) {
-        
-        String[] datosConParentesis = linea.split("\\(");   
-        
-        String[] informacionPersonal = datosConParentesis[1].split(",");
-        
-        Personal.put( idEquipo, informacionPersonal );
-
-    }
+    
 
     @Override
     public void imprimirDataEquipos() {
@@ -243,6 +212,9 @@ public class EquiposRepositorio implements iEquiposRepositorio{
                 System.out.println("");
             } 
         }
+        
+        
+         System.out.println(idEquipo);     
    
      } 
 
@@ -260,6 +232,7 @@ public class EquiposRepositorio implements iEquiposRepositorio{
             
         }
         
+        
         return lector;
     } 
     
@@ -270,10 +243,12 @@ public class EquiposRepositorio implements iEquiposRepositorio{
         
         HashMap< String,String[]> equiposHash = getHashMapEquipo();
         String[] codigosEquipos = new String[ equiposHash.size() ];
-
-        String codigos = equiposHash.keySet() + "";
-        codigos = codigos.replace("[", "").replace("]", "").replaceAll(" ","");
-        codigosEquipos = codigos.split(",");        
+        
+        for(int i=0;i<equiposHash.size();i++){
+            
+            codigosEquipos[i]= i+"";
+                
+        }
         
         String [][] arregloNombreCodigoEquipo = new String[ equiposHash.size() ][ 2 ];
         
@@ -294,10 +269,11 @@ public class EquiposRepositorio implements iEquiposRepositorio{
         leerArchivoEquipos();
         Equipos.put( codigoEquipo  , datosEquipo     );
         Jugadores.put( codigoEquipo, datosJugadores );
+        teamRep.añadirEquipoHash(datosEquipo, idEquipo);
+        jugadoresRep.añadirJugadoresHash(datosJugadores, idEquipo);
         
         
         idEquipo = "-1";
-        System.out.println( Equipos.size() );
         //Eliminaremos el txt existente y volveremos a reescribir
         File fichero = new File( System.getProperty("user.dir") +"/src/database/EquiposLiga.txt");
         
@@ -336,13 +312,9 @@ public class EquiposRepositorio implements iEquiposRepositorio{
         }
         
     }
+    
+    
 
-    
-    
-    
-    
-    
-    
     @Override
     public HashMap<String, String[][]> getHashMapJugadores() {
         
@@ -364,7 +336,13 @@ public class EquiposRepositorio implements iEquiposRepositorio{
         return Personal;
     }
     
+    public void setJugadoresEquipo(String str){
+        jugadoresEquipo = str;
+    }
     
+    public String getJugadoresEquipo (){
+        return jugadoresEquipo;
+    }
     
     
 }
