@@ -5,7 +5,8 @@
         <group>
             <file>file:/C:/Users/nico2/Documents/NetBeansProjects/nba_project/src/database/EquiposLiga.txt</file>
             <file>file:/C:/Users/nico2/Documents/NetBeansProjects/nba_project/src/interfaces/MostrarInfo.java</file>
-            <file>file:/C:/Users/nico2/Documents/NetBeansProjects/nba_project/src/logica/EquiposLogica.java</file>
+            <file>file:/C:/Users/nico2/Documents/NetBeansProjects/nba_project/src/interfaces/CrearPersonal.java</file>
+            <file>file:/C:/Users/nico2/Documents/NetBeansProjects/nba_project/src/interfaces/CrearEquipoInterfaz.java</file>
         </group>
     </open-files>
 </project-private>

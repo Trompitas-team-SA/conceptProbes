@@ -23,6 +23,7 @@ public class MostrarInfo extends javax.swing.JFrame {
     EquiposLogica equipoL = new EquiposLogica();
     private int nameTeam1;
     private int nameTeam2;
+    private int numc;
 
     /**
      * Creates new form MostrarInfo
@@ -53,9 +54,11 @@ public class MostrarInfo extends javax.swing.JFrame {
         jLabel11.setVisible(false);
         jDateChooser1.setVisible(false);
         jScrollPane1.setVisible(false);
+        jButton6.setVisible(false);
         jList1.setModel(model);
         jButton2.setEnabled(false);
-
+        jLabel5.setText("Nombre Arbitro:");
+        jLabel10.setText("Número Faltas totales: ");
     }
 
     /**
@@ -93,6 +96,8 @@ public class MostrarInfo extends javax.swing.JFrame {
         jComboBox2 = new javax.swing.JComboBox<>();
         jLabel11 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -198,6 +203,15 @@ public class MostrarInfo extends javax.swing.JFrame {
             }
         });
 
+        jButton6.setText("Siguiente");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
+        jLabel12.setText("1");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -209,11 +223,6 @@ public class MostrarInfo extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jButton5)
-                                        .addGap(90, 90, 90)
-                                        .addComponent(jLabel2)
-                                        .addGap(63, 63, 63))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel4)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -236,13 +245,14 @@ public class MostrarInfo extends javax.swing.JFrame {
                                                 .addGroup(layout.createSequentialGroup()
                                                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(jTextField5)
-                                                        .addComponent(jTextField6)
-                                                        .addComponent(jTextField7)
-                                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                        .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(jTextField6, javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(jTextField7, javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(layout.createSequentialGroup()
                                                             .addComponent(jButton3)
-                                                            .addGap(38, 38, 38)))))
+                                                            .addGap(18, 18, 18)
+                                                            .addComponent(jButton6)))))
                                             .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -259,7 +269,14 @@ public class MostrarInfo extends javax.swing.JFrame {
                                 .addGap(56, 56, 56)
                                 .addComponent(jButton4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-                                .addComponent(jButton1))))
+                                .addComponent(jButton1))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jButton5)
+                                .addGap(90, 90, 90)
+                                .addComponent(jLabel2)
+                                .addGap(34, 34, 34)
+                                .addComponent(jLabel12)
+                                .addGap(112, 112, 112))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(179, 179, 179)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -274,7 +291,8 @@ public class MostrarInfo extends javax.swing.JFrame {
                 .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton5)
-                    .addComponent(jLabel2))
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel12))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel7)
                 .addGap(4, 4, 4)
@@ -314,7 +332,9 @@ public class MostrarInfo extends javax.swing.JFrame {
                             .addComponent(jLabel9)
                             .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addComponent(jButton3))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton3)
+                            .addComponent(jButton6)))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -406,27 +426,57 @@ public class MostrarInfo extends javax.swing.JFrame {
         String date = dFormat.format(jDateChooser1.getDate());
         nameTeam1 = jComboBox1.getSelectedIndex();
         nameTeam2 = jComboBox2.getSelectedIndex();
-        String nArbitro = jTextField3.getText();
+        String jc1 = jComboBox1.getSelectedItem().toString();
+        String jc2 = jComboBox2.getSelectedItem().toString();
+        String nArbitro = jTextField3.getText().trim();
         String nFaltas = jTextField4.getText();
         String nPuntoTeam1 = jTextField5.getText();
         String nPuntoTeam2 = jTextField7.getText();
         String nEstadio = jTextField6.getText();
         System.out.println(date);
 
-        
         String[][] cod = equipo.obtenerNombreYCodigoEquipo();
         StringBuilder sbf = new StringBuilder();
         String singleString = "";
         sbf.append(cod[nameTeam1][1]);
         singleString = sbf.toString();
-        System.out.println("Equipo 1: "+singleString);
-        
+        System.out.println("Equipo 1: " + singleString);
+
         StringBuilder zbf = new StringBuilder();
         String zingleString = "";
         zbf.append(cod[nameTeam2][1]);
         zingleString = zbf.toString();
-        System.out.println("Equipo 2: "+zingleString);
+        System.out.println("Equipo 2: " + zingleString);
         jButton2.setEnabled(true);
+
+        jComboBox1.setVisible(false);
+        jComboBox2.setVisible(false);
+        jDateChooser1.setVisible(false);
+        jTextField5.setVisible(false);
+        jTextField7.setVisible(false);
+        jTextField6.setVisible(false);
+        jLabel1.setVisible(false);
+        jLabel3.setVisible(false);
+        jLabel4.setVisible(false);
+        jLabel7.setVisible(false);
+        jLabel11.setVisible(false);
+        jLabel6.setVisible(false);
+        jButton6.setVisible(true);
+        jLabel8.setVisible(false);
+        jLabel9.setVisible(false);
+        jTextField3.setText(null);
+        jTextField4.setText(null);
+        jLabel5.setText("Nombre Jugador");
+        jLabel10.setText("Numero Canastas");
+
+         String[][] cod1 = equipo.obtenerNombreYCodigoEquipo();
+
+        StringBuilder sbf1 = new StringBuilder();
+        String singleString1 = "";
+        sbf1.append(equipoL.obtenerJugadoresEquipoPorId(cod1[nameTeam1][1])[numc][1]);
+        singleString1 = sbf1.toString();
+        jTextField3.setText(singleString1);
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
@@ -483,6 +533,24 @@ public class MostrarInfo extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        numc = Integer.parseInt(jLabel12.getText());
+        numc = numc + 1;
+        String lb = Integer.toString(numc);
+        jLabel12.setText(lb);
+        
+        String[][] cod1 = equipo.obtenerNombreYCodigoEquipo();
+
+        StringBuilder sbf1 = new StringBuilder();
+        String singleString1 = "";
+        sbf1.append(equipoL.obtenerJugadoresEquipoPorId(cod1[nameTeam1][1])[numc][1]);
+        singleString1 = sbf1.toString();
+        jTextField3.setText(singleString1);
+        
+       
+    }//GEN-LAST:event_jButton6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -524,12 +592,14 @@ public class MostrarInfo extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
