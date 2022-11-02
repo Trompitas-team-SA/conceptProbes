@@ -31,11 +31,11 @@ public class EquiposLogica implements iEquiposLogica{
     public String[] obtenerEquipoPorId( String equipoId ){
         HashMap<String, String[]> infoEquipo = equipo.getHashMapEquipo();
         
-        System.out.println("Equipo");
+        //System.out.println("Equipo");
         for( int i = 0; i < 7; i ++ ){
-            System.out.print( infoEquipo.get( equipoId )[i] + " , " );
+            //System.out.print( infoEquipo.get( equipoId )[i] + " , " );
         }
-        System.out.println("\n");
+        //System.out.println("\n");
         return infoEquipo.get( equipoId );
     }
     
@@ -43,15 +43,15 @@ public class EquiposLogica implements iEquiposLogica{
     public String[][] obtenerJugadoresEquipoPorId( String equipoId ){
         HashMap<String, String[][]> infoJugadores = equipo.getHashMapJugadores();
         
-        System.out.println("Jugadores");
+        //System.out.println("Jugadores");
         for( int i = 0; i < 12; i ++ ){
             
             for( int k = 0; k < 9; k++ ){
-                System.out.print( infoJugadores.get( equipoId )[i][k] + " , " );
+                //System.out.print( infoJugadores.get( equipoId )[i][k] + " , " );
             }
-            System.out.println("\n");
+            //System.out.println("\n");
         }
-        System.out.println("\n");
+        //System.out.println("\n");
         
         return infoJugadores.get( equipoId );
     }
@@ -60,11 +60,11 @@ public class EquiposLogica implements iEquiposLogica{
         HashMap<String, String[]> infoPersonal = equipo.getHashMapPersonal();
         
         
-        System.out.println("Personal");
+        //System.out.println("Personal");
         for( int i = 0; i < 3; i ++ ){
-            System.out.print( infoPersonal.get( equipoId )[i] + " , " );
+            //System.out.print( infoPersonal.get( equipoId )[i] + " , " );
         }
-        System.out.println("\n");
+        //System.out.println("\n");
         return infoPersonal.get( equipoId );
     }
     
