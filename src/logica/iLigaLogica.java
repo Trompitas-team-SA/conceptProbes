@@ -8,6 +8,8 @@ package logica;
  *
  * @author mac20
  */
-public class iLigaLogica {
+public interface iLigaLogica {
+    
+    public void ordenarPorPartidosGanados(String ordenar);
     
 }
