@@ -11,34 +11,10 @@ Arbitro(pepe1, 25, 11
 Arbitro(pepe3, 23, 12
 ***********************
 ***********************
--3(Philadelphia, Mavericks, 02/10/2022, Cali, 100-150, Mavericks, 700
-Arbitro(pepe4, 24, 13
+-3(equipoRecienCambiado , chucho FC , 04-11-2022 , Pascual , 33 - 22 , equipoRecienCambiado , 999
+Arbitro(Nicolas , 88 , -
 ***********************
 ***********************
--4(Clippers, Spurs, 03/10/2022, Chicago, 120-103, Clippers, 700
-Arbitro(pepe5, 25, 14
-***********************
-***********************
--5(Wizards, Utah, 04/10/2022, Utah, 120-130, Utah, 1000
-Arbitro(pepe6, 26, 15
-***********************
-***********************
--6(Hornets, Detroit, 05/10/2022, Detroit, 120-121, Detroit, 1100
-Arbitro(pepe7, 27, 16
-***********************
-***********************
--7(Cavaliers, Blazers, 06/10/2022, Buga, 120-111, Cavaliers, 1200
-Arbitro(pepe7, 27, 16
-***********************
-***********************
--8(Cali , America , Mon Oct 03 22:29:03 COT 2022 , Caleñopapito , 10-8 , Cali , 4000
-Arbitro(pepeson , Mon Oct 03 22:29:03 COT 2022 , 20
-***********************
-***********************
--9(Independiente pareja , Deportes dosman , Mon Oct 03 22:38:45 COT 2022 , Caleñopapito , 11-10 , Independiente pareja , 5000
-Arbitro(pepeson2 , 22 , 20
-***********************
-***********************
--10(ArturoFutbol , Camilo Club , Mon Oct 03 22:40:28 COT 2022 , Caldas , 110-210 , Camilo Club , 1000
-Arbitro(pepeson3 , 23 , 19
+-4(chucho FC , equipoRecienCambiado , 05-11-2022 , 1 , 123 - 1 , chucho FC , 1
+Arbitro(123 , 123 , -
 ***********************

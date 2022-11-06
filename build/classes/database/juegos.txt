@@ -23,22 +23,14 @@ Arbitro(pepe5, 25, 14
 Arbitro(pepe6, 26, 15
 ***********************
 ***********************
--6(Hornets, Detroit, 05/10/2022, Detroit, 120-121, Detroit, 1100
-Arbitro(pepe7, 27, 16
+-6(Atlanta Hawks , Actualizado el 4 , 04-12-2022 , 123 , 123 - 321 , Actualizado el 4 , 123
+Arbitro(po , 123 , -
 ***********************
 ***********************
--7(Cavaliers, Blazers, 06/10/2022, Buga, 120-111, Cavaliers, 1200
-Arbitro(pepe7, 27, 16
+-7(America malo , America , 04-11-2022 , 123 , 123 - 321 , America , 123
+Arbitro(123 , 123123 , -
 ***********************
 ***********************
--8(Cali , America , Mon Oct 03 22:29:03 COT 2022 , Caleñopapito , 10-8 , Cali , 4000
-Arbitro(pepeson , Mon Oct 03 22:29:03 COT 2022 , 20
-***********************
-***********************
--9(Independiente pareja , Deportes dosman , Mon Oct 03 22:38:45 COT 2022 , Caleñopapito , 11-10 , Independiente pareja , 5000
-Arbitro(pepeson2 , 22 , 20
-***********************
-***********************
--10(ArturoFutbol , Camilo Club , Mon Oct 03 22:40:28 COT 2022 , Caldas , 110-210 , Camilo Club , 1000
-Arbitro(pepeson3 , 23 , 19
+-8(America , America malo , 04-11-2022 , 123 , 123 - 321 , America malo , 123
+Arbitro(123 , 123 , -
 ***********************

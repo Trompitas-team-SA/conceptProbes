@@ -1,161 +1,33 @@
 
 ***********************
--0(Atlanta Hawks, Atlanta, 12, 0, 0, 0, 0
-+Jugador(11, Trae young, 185, 74, 0, 0, 0, 0, 0         
-+Jugador(15, Clint Capela, 208, 116, 0, 0, 0, 0, 0         
-+Jugador(20, John Collins, 206, 103, 0, 0, 0, 0, 0         
-+Jugador(13, Bogdan Bogdanović, 198, 100, 0, 0, 0, 0, 0         
-+Jugador(3, Kevin Huerter, 201, 90, 0, 0, 0, 0, 0         
-+Jugador(21, Cameron Reddish, 203, 98, 0, 0, 0, 0, 0         
-+Jugador(8, Danilo Gallinari, 208, 101, 0, 0, 0, 0, 0         
-+Jugador(38, Chaundee Brown, 196, 98, 0, 0, 0, 0, 0         
-+Jugador(17, Onyeka Okongwu, 203, 109, 0, 0, 0, 0, 0         
-+Jugador(4, Wesley Iwundu, 198, 99, 0, 0, 0, 0, 0         
-+Jugador(6, Lou Williams, 188, 87, 0, 0, 0, 0, 0         
-+Jugador(14, Malcolm Hill, 198, 93, 0, 0, 0, 0, 0
-Personal(Aisha Franklin, Nutricionista Dietista, Nutricionista
-***********************
-***********************
--1(Equipo actualziado,bucaramanga,22,1,2,3,4
-+Jugador(d1,Nombre1,d2,d3,d4,d5,d6,d7,d8         
-+Jugador(d1,Nombre2,d2,d3,d4,d5,d6,d7,d8         
-+Jugador(d1,Nombre3,d2,d3,d4,d5,d6,d7,d8         
-+Jugador(d1,Nombre4,d2,d3,d4,d5,d6,d7,d8         
-+Jugador(d1,Nombre5,d2,d3,d4,d5,d6,d7,d8         
-+Jugador(d1,Nombre6,d2,d3,d4,d5,d6,d7,d8         
-+Jugador(d1,Nombre7,d2,d3,d4,d5,d6,d7,d8         
-+Jugador(d1,Nombre8,d2,d3,d4,d5,d6,d7,d8         
-+Jugador(d1,Nombre9,d2,d3,d4,d5,d6,d7,d8         
-+Jugador(d1,Nombre10,d2,d3,d4,d5,d6,d7,d8         
-+Jugador(d1,Nombre11,d2,d3,d4,d5,d6,d7,d8         
-+Jugador(d1,Nombre12,d2,d3,d4,d5,d6,d7,d8
-Personal(karolsita, Nutricionista Dietista, Nutricionista
-***********************
-***********************
--2(Equipo nuevo JIJIJIJi,bucaramangasss,222,1,2,3,4
-+Jugador(d1,Nombre1,d2,d3,d4,d5,d6,d7,d8         
-+Jugador(d1,Nombre2,d2,d3,d4,d5,d6,d7,d8         
-+Jugador(d1,Nombre3,d2,d3,d4,d5,d6,d7,d8         
-+Jugador(d1,Nombre4,d2,d3,d4,d5,d6,d7,d8         
-+Jugador(d1,Nombre5,d2,d3,d4,d5,d6,d7,d8         
-+Jugador(d1,Nombre6,d2,d3,d4,d5,d6,d7,d8         
-+Jugador(d1,Nombre7,d2,d3,d4,d5,d6,d7,d8         
-+Jugador(d1,Nombre8,d2,d3,d4,d5,d6,d7,d8         
-+Jugador(d1,Nombre9,d2,d3,d4,d5,d6,d7,d8         
-+Jugador(d1,Nombre10,d2,d3,d4,d5,d6,d7,d8         
-+Jugador(d1,Nombre11,d2,d3,d4,d5,d6,d7,d8         
-+Jugador(d1,Nombre12,d2,d3,d4,d5,d6,d7,d8
-Personal(PepesonNoFalla, Nutricionista Dietista, Nutricionista
-***********************
-***********************
--3(equipoRecienCambiado,Antes era karol g mas nuevo,4433,1,2,3,4
-+Jugador(22,Jurgen,123,123,0,0,0,0,0    
-+Jugador(23,pepeson,132,123,0,0,0,0,0    
-+Jugador(11,juancho,44,12,0,0,0,0,0    
-+Jugador(99,mauro,11,2,0,0,0,0,0    
-+Jugador(Brian,pepe,123,321,0,0,0,0,0    
-+Jugador(artur,44,22,13,0,0,0,0,0    
-+Jugador(93,jurgensito,12,31,0,0,0,0,0    
-+Jugador(ramirez,ramires,138,123,0,0,0,0,0    
-+Jugador(oli,ola,pepe,pepe,0,0,0,0,0    
-+Jugador(eljuaniquilador,arigameplays,11,31,0,0,0,0,0    
-+Jugador(12,12,12,12,0,0,0,0,0    
-+Jugador(fa,fa,fa,fa,0,0,0,0,0
-Personal(Penenory,Nutricionista Dietista,Nutricionista
-***********************
-***********************
--4(America malo,Calipapi,0,0,0,0,0
-+Jugador(1,1,1,1,0,0,0,0,0         
-+Jugador(2,2,2,2,0,0,0,0,0         
-+Jugador(3,3,3,3,0,0,0,0,0         
-+Jugador(4,4,4,4,0,0,0,0,0         
-+Jugador(5,5,5,5,0,0,0,0,0         
-+Jugador(6,6,6,6,0,0,0,0,0         
-+Jugador(7,7,77,7,0,0,0,0,0         
-+Jugador(8,8,88,8,0,0,0,0,0         
-+Jugador(9,9,9,9,0,0,0,0,0         
-+Jugador(2,2,2,1,0,0,0,0,0         
-+Jugador(1,1,11,1,0,0,0,0,0         
-+Jugador(23,1,123,123,0,0,0,0,0
-Personal(pepelindo,mucha,vago
-***********************
-***********************
--5(America malo,Calipapi,0,0,0,0,0
-+Jugador(1,pablo,123,123,0,0,0,0,0         
-+Jugador(2,jur,123,123,0,0,0,0,0         
-+Jugador(3,mauro,123,123,0,0,0,0,0         
-+Jugador(4,nicolashgay,21,12,0,0,0,0,0         
-+Jugador(5,brian,123,123,0,0,0,0,0         
-+Jugador(6,6,6,6,0,0,0,0,0         
-+Jugador(7,7,7,7,0,0,0,0,0         
-+Jugador(8,8,8,8,0,0,0,0,0         
-+Jugador(9,9,9,9,0,0,0,0,0         
-+Jugador(xd,xd,xd,xd,0,0,0,0,0         
-+Jugador(daf,daf,daf,daf,0,0,0,0,0         
-+Jugador(f,f,f,f,0,0,0,0,0
-Personal(Josepepe,poquitaxd,entrenador
-***********************
-***********************
--6(America malo,Calipapi,0,0,0,0,0
-+Jugador(1,1,1,1,0,0,0,0,0         
-+Jugador(2,2,22,2,0,0,0,0,0         
-+Jugador(3,3,3,3,0,0,0,0,0         
-+Jugador(4,4,4,4,0,0,0,0,0         
-+Jugador(5,5,5,5,0,0,0,0,0         
-+Jugador(6,6,6,6,0,0,0,0,0         
-+Jugador(7,7,7,7,0,0,0,0,0         
-+Jugador(8,8,8,8,0,0,0,0,0         
-+Jugador(9,9,9,9,0,0,0,0,0         
-+Jugador(1,1,1,1,0,0,0,0,0         
-+Jugador(4,4,4,4,0,0,0,0,0         
-+Jugador(5,5,5,5,0,0,0,0,0
+-0(America,Calipapi,0,0,1,210,0
++Jugador(1,1,1,1,150,0,0,0,5 
++Jugador(2,2,22,22,0,0,0,10,0 
++Jugador(3,3,3,3,0,0,0,0,0 
++Jugador(4,4,4,4,50,0,0,0,0 
++Jugador(5,5,5,5,0,0,30,0,0 
++Jugador(6,6,6,6,0,0,0,0,0 
++Jugador(7,7,7,7,0,0,0,0,0 
++Jugador(8,8,8,8,0,0,20,0,0 
++Jugador(9,9,9,9,0,20,0,0,0 
++Jugador(1,1,1,1,0,0,40,0,0 
++Jugador(4,4,4,4,0,0,0,30,0 
++Jugador(5,5,5,5,10,0,0,0,10
 Personal(mauricio,mucha,profe
 ***********************
 ***********************
--7(America malo,Calipapi,0,0,0,0,0
-+Jugador(12,jur,1,1,0,0,0,0,0         
-+Jugador(13,jur,123,123,0,0,0,0,0         
-+Jugador(14,14,14,14,0,0,0,0,0         
-+Jugador(15,15,15,15,0,0,0,0,0         
-+Jugador(161,16,16,16,0,0,0,0,0         
-+Jugador(17,17,17,15,0,0,0,0,0         
-+Jugador(2,12,12,12,0,0,0,0,0         
-+Jugador(124,124,124,41,0,0,0,0,0         
-+Jugador(151,15,15,15,0,0,0,0,0         
-+Jugador(151,16,16,16,0,0,0,0,0         
-+Jugador(17,17,17,17,0,0,0,0,0         
-+Jugador(1235º,14,123,12,0,0,0,0,0
+-1(America,Calipapi,0,0,2,460,0
++Jugador(1,1,1,1,350,0,0,0,5
++Jugador(2,2,22,22,0,0,0,10,0
++Jugador(3,3,3,3,0,0,0,0,0
++Jugador(4,4,4,4,50,230,0,0,0
++Jugador(5,5,5,5,0,0,50,0,0
++Jugador(6,6,6,6,20,0,0,0,0
++Jugador(7,7,7,7,0,0,0,0,0
++Jugador(8,8,8,8,30,0,20,0,0
++Jugador(9,9,9,9,0,20,0,0,0
++Jugador(1,1,1,1,0,0,40,0,0
++Jugador(4,4,4,4,0,0,0,30,0
++Jugador(5,5,5,5,10,0,0,0,10
 Personal(tascon,nuevo,profesor
-***********************
-***********************
--8(calipapasito,buga,44,1,2,3,4
-+Jugador(22,Jurgen,123,123,0,0,0,0,0    
-+Jugador(23,pepeson,132,123,0,0,0,0,0    
-+Jugador(11,juancho,44,12,0,0,0,0,0    
-+Jugador(99,mauro,11,2,0,0,0,0,0    
-+Jugador(Brian,pepe,123,321,0,0,0,0,0    
-+Jugador(artur,44,22,13,0,0,0,0,0    
-+Jugador(93,jurgensito,12,31,0,0,0,0,0    
-+Jugador(ramirez,ramires,138,123,0,0,0,0,0    
-+Jugador(oli,ola,pepe,pepe,0,0,0,0,0    
-+Jugador(eljuaniquilador,arigameplays,11,31,0,0,0,0,0    
-+Jugador(12,12,12,12,0,0,0,0,0    
-+Jugador(fa,fa,fa,fa,0,0,0,0,0
-Personal(Jurgen,muchisima,pepeson
-***********************
-***********************
--9(Eladio carrion,locacion,12,0,0,0,0
-+Jugador(p,p,p,p,0,0,0,0,0  
-+Jugador(b,b,b,b,0,0,0,0,0  
-+Jugador(b,b,b,b,0,0,0,0,0  
-+Jugador(b,b,b,b,0,0,0,0,0  
-+Jugador(b,b,b,b,0,0,0,0,0  
-+Jugador(b,b,b,b,0,0,0,0,0  
-+Jugador(b,b,b,b,0,0,0,0,0  
-+Jugador(b,b,b,b,0,0,0,0,0  
-+Jugador(b,b,b,b,0,0,0,0,0  
-+Jugador(b,b,b,b,0,0,0,0,0  
-+Jugador(b,b,b,b,0,0,0,0,0  
-+Jugador(b,b,b,b,0,0,0,0,0
-Personal(jurgensito,mucha ,jijijiji
 ***********************

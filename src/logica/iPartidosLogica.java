@@ -10,7 +10,7 @@ package logica;
  */
 public interface iPartidosLogica {
     
-    public void añadirPartido            ();
+    public void añadirPartido( String nombreEquipo1, String nombreEquipo2, String puntosEqui1, String puntosEqui2, String fecha, String nArbitro, String nFaltas, String nEstadio, String nEspectadores);
     public void imprimirPartidosYArbitros();
     public String[] obtenerGanadorEncuentroYMarcador(String[] puntos, String[] equipos);
 }

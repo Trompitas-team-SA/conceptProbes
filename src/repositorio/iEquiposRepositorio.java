@@ -18,15 +18,12 @@ public interface iEquiposRepositorio {
     public BufferedReader               obtenerFile()                                               ;
     public boolean                      validarSiEsAsterisco( String linea )                        ;
     public int                          validarSiLineaEsDeEquipoUJugadorUPersonal( String linea )   ;
-    public void                         ingresarDataEquipos( String linea )                         ;
-    public void                         ingresarDataJugadores( String linea )                       ;
-    public void                         ingresarDataPersonal(String linea)                          ;
     
-    public void imprimirDataEquipos();  
+    public void                         imprimirDataEquipos()                                       ;  
     
-    public HashMap<String, String[][]>  getHashMapJugadores ();
-    public HashMap<String, String[] >   getHashMapEquipo    ();
-    public HashMap<String, String[] >   getHashMapPersonal  ();
+    public HashMap<String, String[][]>  getHashMapJugadores ()                                      ;
+    public HashMap<String, String[] >   getHashMapEquipo    ()                                      ;
+    public HashMap<String, String[] >   getHashMapPersonal  ()                                      ;
     
     public void                         escribirEquipoNuevo( String[] dataEquipo, String[][] dataJugadores, String[] dataTrabajador  )  ;
     public FileWriter                   obtenerFichero()                                                                                ;

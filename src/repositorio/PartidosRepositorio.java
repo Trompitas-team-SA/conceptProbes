@@ -90,10 +90,10 @@ public class PartidosRepositorio implements iPartidosRepositorio {
     
     public BufferedReader obtenerFile(){
         
-        File documento = new File( System.getProperty("user.dir") +"/src/main/java/database/juegos.txt");
+        File documento = new File( System.getProperty("user.dir") +"/src/database/juegos.txt");
         BufferedReader lector = null;
         try{
-            
+            if( !documento.exists() ) System.out.println("No Existe");
             lector = new BufferedReader( new FileReader( documento ) );
             
         } catch( FileNotFoundException ex) {
@@ -112,7 +112,7 @@ public class PartidosRepositorio implements iPartidosRepositorio {
         
         try{
             
-            fichero = new FileWriter( System.getProperty("user.dir") +"/src/main/java/database/juegos.txt", true);
+            fichero = new FileWriter( System.getProperty("user.dir") +"/src/database/juegos.txt", true);
             
         } catch( IOException io ){
             System.out.println("Error al obtener fichero Equipos Repositorio " + io );

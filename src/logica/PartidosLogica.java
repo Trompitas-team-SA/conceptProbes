@@ -4,17 +4,7 @@
  */
 package logica;
 
-import co.edu.usbcali.nba_project.models.Arbitro;
-import co.edu.usbcali.nba_project.models.Juego;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Set;
 import repositorio.PartidosRepositorio;
-import java.util.Date;
-import java.time.Month;
-import java.time.LocalDate;
 
 /**
  *
@@ -24,66 +14,19 @@ public class PartidosLogica implements iPartidosLogica {
     
     
     @Override
-    public void añadirPartido(){
+    public void añadirPartido( String nombreEquipo1, String nombreEquipo2, String puntosEqui1, String puntosEqui2, String fecha, String nArbitro, String nFaltas, String nEstadio, String nEspectadores){
         
+        PartidosRepositorio partidos = new PartidosRepositorio(); 
+        String marcador = puntosEqui1 + " - " + puntosEqui2;
         
-        String nombreEquipoUno      = "";
-        String nombreEquipoDos      = "";
-        String locacionPartido      = "";
-        String marcadorPartido      = "";
-        String ganadorEncuentro     = "";
-        String numeroEspectadores   = "";
-        String nombreArbitro        = "";
-        String edadArbitro          = "";
-        int    expulsionesEfectuadas= 0 ;
+        //Encontrar ganador
         
-        PartidosRepositorio partidos = new PartidosRepositorio();
-       
-        
-        
-        
-        
-        Juego instPartido = new Juego();
-        Arbitro arbitro1 = new Arbitro();
-        
-        ArrayList<String> equipos = new ArrayList<>();
-        equipos.add( nombreEquipoUno );
-        equipos.add( nombreEquipoDos );
-        Date fecha = new Date();
-        
-        instPartido.setEquiposEnfrentados( equipos );
-        instPartido.setFechaJuego( fecha );
-        instPartido.setLocacion(locacionPartido );
-        instPartido.setMarcador(marcadorPartido);
-        instPartido.setGanadorEncuentro( ganadorEncuentro );
-        instPartido.setNumExpectadores( numeroEspectadores );
-        
-        String [] dataPartido = new String[7];
-        dataPartido[0] = instPartido.getEquiposEnfrentados().get(0)     + "";
-        dataPartido[1] = instPartido.getEquiposEnfrentados().get(1)     + "";
-        dataPartido[2] = instPartido.getFechaJuego()                         + "";
-        dataPartido[3] = instPartido.getLocacion()                           + "";
-        dataPartido[4] = instPartido.getMarcador()                           + "";
-        dataPartido[5] = instPartido.getGanadorEncuentro()                   + "";
-        dataPartido[6] = instPartido.getNumExpectadores()                    + "";
-        
-        
-        
-        
-        arbitro1.setNombre("pepeson4");
-        arbitro1.setEdad( "24" );
-        arbitro1.setExpulsionJugador( 19 );
-        
-        
-        
-        String[] dataArbitro = new String[3];
-        dataArbitro[0] = arbitro1.getNombre();
-        dataArbitro[1] = arbitro1.getEdad() + "";
-        dataArbitro[2] = arbitro1.getExpulsionJugador() + "";
-        
-        
-        String stringPartido = "" + dataPartido[0] + " , " + dataPartido[1] + " , " + dataPartido[2] + " , " + dataPartido[3] + " , " + dataPartido[4] + " , " + dataPartido[5] + " , " + dataPartido[6];
-        String stringArbitro = "" + dataArbitro[0] + " , " + dataArbitro[1] + " , " + dataArbitro[2];
+        String ganador =    "";
+        if( Integer.parseInt( puntosEqui1 ) > Integer.parseInt( puntosEqui2 )) ganador = nombreEquipo1;
+        else ganador = nombreEquipo2;
+
+        String stringPartido = "" + nombreEquipo1 + " , " + nombreEquipo2 + " , " + fecha + " , " + nEstadio + " , " + marcador + " , " + ganador + " , " + nEspectadores;
+        String stringArbitro = "" + nArbitro + " , " + nFaltas + " , " + "-";
         
         partidos.añadirRegistroJuego( stringPartido , stringArbitro  );
     }
